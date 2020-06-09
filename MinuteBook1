@@ -1,0 +1,109 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ComplainBox
+{
+    public partial class MinuteBook : Form
+    {
+        public MinuteBook()
+        {
+            InitializeComponent();
+        }
+        
+
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            string complaint = txtcomplaint.Text;
+            string details = txtdetails.Text;
+            string datetime = txtdatetime.Text;
+            MessageBox.Show("Successfully saved");
+           
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+
+            string complaint = txtcomplaint.Text;
+            string details = txtdetails.Text;
+            string datetime = txtdatetime.Text;
+            txtcomplaint.Clear();
+            txtdetails.Clear();
+            txtdatetime.Clear();
+        }
+
+        private void btnShow_Click_1(object sender, EventArgs e)
+        {
+            MinuteBookAllEntrys mi = new MinuteBookAllEntrys();
+            mi.Show();
+            this.Hide();
+        }
+
+       
+        
+       
+        
+
+        
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+Minute Book Details:-
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ComplainBox
+{
+    public partial class MinuteBookAllEntrys : Form
+    {
+        public MinuteBookAllEntrys()
+        {
+            InitializeComponent();
+        }
+       
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Data Refreshed...");
+        }
+
+        private void btnprint_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("data Printed..");
+        }
+
+        
+
+       
+       
+    }
+}
+
+
+
+
